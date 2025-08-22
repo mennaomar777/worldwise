@@ -1,0 +1,37 @@
+.sidebar {
+  flex: 1 1 50%;
+  max-width: none;
+  padding: 2.4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    flex-basis: 40rem;
+    padding: 2rem 3.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 1.6rem 2.4rem;
+    height: auto;
+    box-shadow: none;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 1.2rem 1.6rem;
+  }
+}

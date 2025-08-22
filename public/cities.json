@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": "17806751"
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": "98443197"
+    },
+    {
+      "id": "5cc7",
+      "cityName": "Istanbul",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2025-08-22T14:04:22.512Z",
+      "notes": "nice trip",
+      "position": {
+        "lat": "41.178653972331674",
+        "lng": "28.901369422674183"
+      }
+    },
+    {
+      "id": "0ea4",
+      "cityName": "Corral de Almaguer",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-08-22T20:41:41.658Z",
+      "notes": "",
+      "position": {
+        "lat": "39.78056258666016",
+        "lng": "-3.2919906139967297"
+      }
+    }
+  ]
+}

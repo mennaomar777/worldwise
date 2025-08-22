@@ -1,0 +1,161 @@
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--color-dark--1);
+  min-height: 100vh;
+}
+
+/* Global Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--color-light--2);
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-light--2);
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-light--2);
+}
+
+/* Labels and Inputs */
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-light--1);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-light--3);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Call to Action (CTA) */
+.cta:link,
+.cta:visited {
+  display: inline-block;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.2rem 3.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta:hover,
+.cta:active {
+  background-color: var(--color-brand--1);
+  color: var(--color-dark--0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .cta:link,
+  .cta:visited {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.8rem 1.2rem;
+  }
+}

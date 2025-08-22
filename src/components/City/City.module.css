@@ -1,0 +1,134 @@
+.city {
+  padding: 2.4rem 3.2rem;
+  max-height: calc(100vh - 12rem);
+  background-color: var(--color-dark--2);
+  border-radius: 8px;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Custom Scrollbar */
+.city::-webkit-scrollbar {
+  width: 8px;
+}
+
+.city::-webkit-scrollbar-track {
+  background: var(--color-dark--0);
+  border-radius: 8px;
+}
+
+.city::-webkit-scrollbar-thumb {
+  background: var(--color-brand--2);
+  border-radius: 8px;
+}
+
+.city::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand--1);
+}
+
+.city {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand--2) var(--color-dark--0);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.city h6 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--color-light--1);
+  letter-spacing: 0.5px;
+}
+
+.city h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--color-light--2);
+}
+
+.city h3 span {
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+.city p {
+  font-size: 1.6rem;
+  color: var(--color-light--2);
+  line-height: 1.8;
+}
+
+.city a:link,
+.city a:visited {
+  font-size: 1.6rem;
+  color: var(--color-brand--1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.city a:hover,
+.city a:active {
+  color: var(--color-brand--2);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city {
+    padding: 1.6rem 2.4rem;
+    max-height: calc(50vh - 8rem);
+    gap: 1.6rem;
+  }
+
+  .city h3 {
+    font-size: 1.8rem;
+  }
+
+  .city h3 span {
+    font-size: 3rem;
+  }
+
+  .city p,
+  .city a:link,
+  .city a:visited {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .city {
+    padding: 1.2rem 1.6rem;
+    max-height: calc(40vh - 6rem);
+    gap: 1.2rem;
+  }
+
+  .city h6 {
+    font-size: 1.1rem;
+  }
+
+  .city h3 {
+    font-size: 1.6rem;
+  }
+
+  .city h3 span {
+    font-size: 2.8rem;
+  }
+
+  .city p,
+  .city a:link,
+  .city a:visited {
+    font-size: 1.3rem;
+  }
+}

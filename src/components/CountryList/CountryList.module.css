@@ -1,0 +1,57 @@
+.countryList {
+  width: 100%;
+  max-height: calc(100vh - 12rem);
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 1fr)
+  ); /* Responsive grid */
+  align-content: start;
+  gap: 1.8rem;
+  padding: 1.6rem;
+  border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+.countryList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.countryList::-webkit-scrollbar-track {
+  background: var(--color-dark--2);
+  border-radius: 8px;
+}
+
+.countryList::-webkit-scrollbar-thumb {
+  background: var(--color-brand--2);
+  border-radius: 8px;
+}
+
+.countryList::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand--1);
+}
+
+.countryList {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand--2) var(--color-dark--2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countryList {
+    grid-template-columns: 1fr;
+    max-height: calc(50vh - 8rem);
+    gap: 1.4rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countryList {
+    max-height: calc(40vh - 6rem);
+    gap: 1.2rem;
+  }
+}

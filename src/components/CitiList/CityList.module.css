@@ -1,0 +1,55 @@
+.cityList {
+  width: 100%;
+  height: 65vh;
+  max-height: calc(100vh - 12rem);
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+.cityList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cityList::-webkit-scrollbar-track {
+  background: var(--color-dark--2);
+  border-radius: 8px;
+}
+
+.cityList::-webkit-scrollbar-thumb {
+  background: var(--color-brand--2);
+  border-radius: 8px;
+}
+
+.cityList::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand--1);
+}
+
+/* Firefox Scrollbar */
+.cityList {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand--2) var(--color-dark--2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cityList {
+    max-height: calc(50vh - 8rem);
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cityList {
+    max-height: calc(40vh - 6rem);
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
