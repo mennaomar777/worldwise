@@ -1,5 +1,5 @@
 import React from "react";
-import AppNav from "../../components/appNav/AppNav";
+import AppNav from "../../components/AppNav/AppNav";
 import styles from "./AppLayout.module.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Map from "../../components/Map/Map";
