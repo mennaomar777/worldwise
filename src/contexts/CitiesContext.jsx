@@ -1,4 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { supabase } from "../supabase";
+
 const CitiesContext = createContext();
 
 export default function CitiesProvider({ children }) {
@@ -8,12 +10,12 @@ export default function CitiesProvider({ children }) {
 
   async function fetchCities() {
     setIsLoading(true);
-
     try {
-      const res = await fetch("http://localhost:8000/cities");
-      const data = await res.json();
+      const { data, error } = await supabase.from("cities").select("*");
+      if (error) throw error;
       setCities(data);
     } catch (error) {
+      console.error(error);
       throw new Error("There was an error loading cities");
     } finally {
       setIsLoading(false);
@@ -24,29 +26,33 @@ export default function CitiesProvider({ children }) {
     setIsLoading(true);
     if (Number(id) === currentCity.id) return;
     try {
-      const res = await fetch(`http://localhost:8000/cities/${id}`);
-      const data = await res.json();
+      const { data, error } = await supabase
+        .from("cities")
+        .select("*")
+        .eq("id", id)
+        .single();
+      if (error) throw error;
       setCurrentCity(data);
     } catch (error) {
+      console.error(error);
       throw new Error("There was an error loading the city.");
     } finally {
       setIsLoading(false);
     }
   }
+
   async function createCity(newCity) {
     setIsLoading(true);
-
     try {
-      const res = await fetch(`http://localhost:8000/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
+      const { data, error } = await supabase
+        .from("cities")
+        .insert([newCity])
+        .select()
+        .single();
+      if (error) throw error;
       setCities((cities) => [...cities, data]);
     } catch (error) {
+      console.error(error);
       throw new Error("There was an error creating the city.");
     } finally {
       setIsLoading(false);
@@ -55,13 +61,12 @@ export default function CitiesProvider({ children }) {
 
   async function deleteCity(id) {
     setIsLoading(true);
-
     try {
-      const res = await fetch(`http://localhost:8000/cities/${id}`, {
-        method: "Delete",
-      });
+      const { error } = await supabase.from("cities").delete().eq("id", id);
+      if (error) throw error;
       setCities((cities) => cities.filter((city) => city.id !== id));
     } catch (error) {
+      console.error(error);
       throw new Error("There was an error deleting the city.");
     } finally {
       setIsLoading(false);

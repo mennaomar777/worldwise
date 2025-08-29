@@ -37,15 +37,39 @@
       }
     },
     {
-      "id": "0ea4",
-      "cityName": "Corral de Almaguer",
+      "id": "0b91",
+      "cityName": "Zaragoza",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2025-08-22T20:41:41.658Z",
+      "date": "2025-08-24T12:23:33.844Z",
       "notes": "",
       "position": {
-        "lat": "39.78056258666016",
-        "lng": "-3.2919906139967297"
+        "lat": "41.70734723312043",
+        "lng": "-0.9646972301438407"
+      }
+    },
+    {
+      "id": "1edf",
+      "cityName": "Malagon",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-08-24T12:24:21.333Z",
+      "notes": "",
+      "position": {
+        "lat": "39.201577145066864",
+        "lng": "-3.820353154994414"
+      }
+    },
+    {
+      "id": "cb21",
+      "cityName": "Rosell",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-08-25T15:49:07.153Z",
+      "notes": "",
+      "position": {
+        "lat": "40.624086790007915",
+        "lng": "0.22696263484671692"
       }
     }
   ]
